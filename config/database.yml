@@ -1,0 +1,24 @@
+default: &default
+  max_connections: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  password: postgres
+  encoding: unicode
+
+
+development:
+  <<: *default
+  database: crimson_slash_development
+
+
+test:
+  <<: *default
+  database: crimson_slash_test
+
+
+production:
+  <<: *default
+  database: crimson_slash_production
+  username: crimson_slash
+  password: <%= ENV["CRIMSON_SLASH_DATABASE_PASSWORD"] %>
