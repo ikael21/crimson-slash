@@ -14,6 +14,8 @@ gem 'thruster', require: false
 
 gem 'school21_api_sdk', require: 'school21'
 
+gem 'newrelic_rpm'
+
 # Frontend
 gem 'inertia_rails', '~> 3.14'
 gem 'vite_rails', '~> 3.0'
